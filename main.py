@@ -34,7 +34,6 @@ for line in file1:
     if "F" in line:
         file2.write(line + '\n')
     else:
-        file2.write(str(((float(line[:2]) * 9) / 5) + 32) + 'F' + '\n')
-print(file2.readlines())
+        file2.write(str(((float(line[:-1]) * 9) / 5) + 32) + 'F' + '\n')
 file2.close()
 
